@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obtener IP Pública</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", (event) => {
+        // Usar la API de ipify para obtener la IP pública
+        fetch("https://api.ipify.org?format=json")
+          .then((response) => response.json())
+          .then((data) => {
+            const userIp = data.ip;
+            console.log("IP Pública del usuario:", userIp);
+
+            // Puedes hacer algo con la IP obtenida, como enviarla a tu servidor
+            // o mostrarla en la página web
+            // Ejemplo: Mostrar la IP en un elemento de la página
+            document.getElementById(
+              "user-ip"
+            ).textContent = `IP Pública: ${userIp}`;
+          })
+          .catch((error) => {
+            console.error("Error al obtener la IP pública:", error);
+          });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Bienvenido a Mi Página Web</h1>
+    <p id="user-ip">Obteniendo IP...</p>
+  </body>
+</html>

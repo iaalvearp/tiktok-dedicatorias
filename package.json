@@ -1,0 +1,22 @@
+{
+  "name": "geo",
+  "version": "0.0.1",
+  "description": "georeference proof",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "type": "module",
+  "keywords": [
+    "georeference",
+    "js"
+  ],
+  "author": "Ali Alpes",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "3.1.0"
+  }
+}
