@@ -1,0 +1,17 @@
+CREATE DATABASE ip_phishing;
+
+USE ip_phishing;
+
+SHOW TABLES;
+
+CREATE TABLE ips (
+    id_ips INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    ip TEXT,
+    data_created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+DESCRIBE ips;
+
+INSERT INTO ips (ip) values ('192.193.12.68');
+
+SELECT * FROM ips;
