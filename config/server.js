@@ -2,7 +2,7 @@ import express from 'express';
 import path from 'node:path';
 const bodyParser = require('body-parser');
 
-const app = express();
+export const app = express();
 
 // settings
 app.set('port', process.env.PORT || 3000);

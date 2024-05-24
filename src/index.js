@@ -1,9 +1,9 @@
-const app = require('../config/server');
+import app, { listen, get as _get } from '../config/server.js';
 
 require('./app/routes/news')(app);
 
-app.listen(app.get(get('port'), () => {
-    console.log('server on port ', app.get('port'));
+listen(_get(get('port'), () => {
+    console.log('server on port ', _get('port'));
 }));
 
 
